@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Shape & Hairstyle Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Face Shape & Hairstyle Recommender</h1>
+    <div class="video-container">
+        <!-- Webcam video feed -->
+        <video id="webcam" autoplay playsinline></video>
+
+        <!-- Canvas to draw face landmarks -->
+        <canvas id="faceCanvas"></canvas>
+
+        <!-- Hairstyle recommendation overlay -->
+        <img id="hairstyleOverlay" class="filter" alt="Recommended Hairstyle">
+    </div>
+
+    <div id="output">
+        <p>Detected Face Shape: <span id="faceShape"></span></p>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script defer src="./app.js"></script>
+</body>
+</html>
